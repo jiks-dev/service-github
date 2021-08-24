@@ -2,9 +2,9 @@ name: .NET Core Testing Workflows
 
 on:
   push:
-    branches: [ 'feature/*', 'hotfix/*', 'bugfix/*' ]
+    branches: [ 'main', 'feature/*', 'hotfix/*', 'bugfix/*' ]
   pull_request:
-    branches: [ 'feature/*', 'hotfix/*', 'bugfix/*' ]
+    branches: [ 'main', 'feature/*', 'hotfix/*', 'bugfix/*' ]
 
 jobs:
   build:
