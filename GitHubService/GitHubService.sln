@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubService", "GitHubService\GitHubService.csproj", "{9044446E-3E11-414F-B1E1-458F92F150EB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubService.Domain", "GitHubService.Domain\GitHubService.Domain.csproj", "{F460E1C4-F9FE-4C53-A253-A5CC8F856486}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubService.Infrastructure", "GitHubService.Infrastructure\GitHubService.Infrastructure.csproj", "{E9015730-B639-4170-8515-978B8EE987E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHubService.API", "GitHubService.API\GitHubService.API.csproj", "{2670F30F-14A9-41C6-9E4D-4A4F4D3C405C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9044446E-3E11-414F-B1E1-458F92F150EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9044446E-3E11-414F-B1E1-458F92F150EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9044446E-3E11-414F-B1E1-458F92F150EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9044446E-3E11-414F-B1E1-458F92F150EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F460E1C4-F9FE-4C53-A253-A5CC8F856486}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F460E1C4-F9FE-4C53-A253-A5CC8F856486}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F460E1C4-F9FE-4C53-A253-A5CC8F856486}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F460E1C4-F9FE-4C53-A253-A5CC8F856486}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9015730-B639-4170-8515-978B8EE987E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9015730-B639-4170-8515-978B8EE987E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9015730-B639-4170-8515-978B8EE987E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9015730-B639-4170-8515-978B8EE987E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2670F30F-14A9-41C6-9E4D-4A4F4D3C405C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2670F30F-14A9-41C6-9E4D-4A4F4D3C405C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2670F30F-14A9-41C6-9E4D-4A4F4D3C405C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2670F30F-14A9-41C6-9E4D-4A4F4D3C405C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
