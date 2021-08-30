@@ -1,19 +1,27 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 
 namespace GitHubService.API.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
-    public class OrganizationController : ControllerBase
+    [Route("/api/[controller]")]
+    public class OrganizationController : Controller
     {
-        public String OrganizationInformation()
+        private readonly ILogger<OrganizationController> _logger;
+
+        public OrganizationController(ILogger<OrganizationController> logger)
         {
-            return "test";
+            _logger = logger;
+        }
+
+        [HttpGet]
+        public String Index()
+        {
+            return "Hello Organization";
         }
     }
 }
