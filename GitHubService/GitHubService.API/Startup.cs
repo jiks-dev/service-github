@@ -1,3 +1,4 @@
+using GitHubService.API.Services.OrganizationService;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,6 +29,10 @@ namespace GitHubService.API
         {
 
             services.AddControllers();
+            
+            // Organization Service Add
+            services.AddScoped<IOrganizationService, OrganizationService>();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "GitHubService.API", Version = "v1" });
