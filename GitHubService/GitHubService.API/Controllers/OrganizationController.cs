@@ -16,7 +16,9 @@ namespace GitHubService.API.Controllers
         private readonly ILogger<OrganizationController> _logger = null;
         private readonly IOrganizationService _organizationService = null;
 
-        public OrganizationController(ILogger<OrganizationController> logger, IOrganizationService organizationService)
+        public OrganizationController(
+            ILogger<OrganizationController> logger, 
+            IOrganizationService organizationService)
         {
             _logger = logger;
             _organizationService = organizationService;
@@ -28,7 +30,7 @@ namespace GitHubService.API.Controllers
         /// <example>jiks-dev</example>
         /// <returns></returns>
         [HttpGet("{name}")]
-        public Organization Get(string name)
+        public Organization GetOrganizationInformation(string name)
         {
             return _organizationService.Get(name);
         }

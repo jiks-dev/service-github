@@ -13,6 +13,8 @@ namespace GitHubService.API.Services.OrganizationService
     public class OrganizationService : IOrganizationService
     {
         private readonly ILogger<OrganizationService> _logger;
+        
+        private const string githubUri = "https://api.github.com";
 
         public OrganizationService(ILogger<OrganizationService> logger)
         {
@@ -23,9 +25,9 @@ namespace GitHubService.API.Services.OrganizationService
         /// Call organization infroamtion from github api
         /// </summary>
         /// <returns>Organization Inforamtion</returns>
-        public Organization Get(string name)
+        public Organization GetOrganizationInformation(string name)
         {
-            var client = new RestClient("https://api.github.com");
+            var client = new RestClient(githubUri);
             var request = new RestRequest($"orgs/{name}", Method.GET);
             var response = client.Execute<Organization>(request);
 
