@@ -16,10 +16,11 @@ jobs:
       with:
         dotnet-version: '5.0.400'
     - name: Restore dependencies
+      working-directory: GitHubService/GitHubService
       run: dotnet restore
     - name: Build
       working-directory: GitHubService/GitHubService
-      run: dotnet build "GitHubService" --no-restore
+      run: dotnet build --no-restore
   domain-test:
     needs: build
     runs-on: ubuntu-latest
