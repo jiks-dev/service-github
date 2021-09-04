@@ -2,9 +2,9 @@ name: .NET Core Testing Workflows
 
 on:
   push:
-    branches: [ 'main', 'feature/*', 'hotfix/*', 'bugfix/*' ]
+    branches: [ 'main', 'dev', 'feature/*', 'hotfix/*', 'bugfix/*' ]
   pull_request:
-    branches: [ 'main', 'feature/*', 'hotfix/*', 'bugfix/*' ]
+    branches: [ 'main', 'dev', 'feature/*', 'hotfix/*', 'bugfix/*' ]
 
 jobs:
   build:
@@ -14,12 +14,12 @@ jobs:
     - name: Setup dotnet
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '3.1.x'
+        dotnet-version: '5'
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
       working-directory: GitHubService/GitHubService
-      run: dotnet build --no-restore
+      run: dotnet build "GitHubService" --no-restore
   domain-test:
     needs: build
     runs-on: ubuntu-latest
