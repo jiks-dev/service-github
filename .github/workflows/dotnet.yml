@@ -16,10 +16,10 @@ jobs:
       with:
         dotnet-version: '5.0.400'
     - name: Restore dependencies
-      working-directory: GitHubService/GitHubService
+      working-directory: GitHubService
       run: dotnet restore
     - name: Build
-      working-directory: GitHubService/GitHubService
+      working-directory: GitHubService
       run: dotnet build --no-restore
   domain-test:
     needs: build
@@ -27,7 +27,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Testing API
-      working-directory: GitHubService/GitHubService
+      working-directory: GitHubService
       run: dotnet test "GitHubService.Domain" --no-build --verbosity normal
   api-test:
     needs: domain-test
@@ -35,5 +35,5 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Testing API
-      working-directory: GitHubService/GitHubService
+      working-directory: GitHubService
       run: dotnet test "GitHubService.API" --no-build --verbosity normal
